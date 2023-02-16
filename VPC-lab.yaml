@@ -61,3 +61,25 @@
         Properties:
           SubnetId: !Ref PublicSubnet1
           RouteTableId: !Ref PublicRouteTable
+ 
+      ##EC2  
+      MyNewEC2Instance:
+        Type: AWS::EC2::Instance
+      
+      ##S3
+      S3Bucket:
+        Type: 'AWS::S3::Bucket'
+        DeletionPolicy: Retain
+        
+    Properties: 
+        ImageId: ami-023dd49682f8a7c2b
+        InstanceType: t2.micro
+        SubnetId: !Ref PublicSubnet1
+  
+      SecurityGroupIds: 
+  
+        - sg-062ccd4ce44eca560
+  
+      KeyName: EC2-lab1
+      
+      BucketName: lab1-BUCKET
