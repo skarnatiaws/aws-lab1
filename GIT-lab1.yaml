@@ -6,26 +6,18 @@ Resources:
       CidrBlock: 10.1.0.0/16
       EnableDnsSupport: true
       EnableDnsHostnames: true
-      Tags:
-      - Key: Name
-      Value:  !Join ['', [!Ref "AWS::StackName", "-VPC-GIT-lab1" ]]
-		
+      		
   PublicSubnetA:
     Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref VPC-GIT-lab1
       CidrBlock: 10.1.10.0/24
       AvailabilityZone: ap-southeast-2a       
-      Tags:
-      - Key: Name
-      Value: !Sub ${AWS::StackName}-Public-A
-		
+     		
   PrivateSubnetA:
     Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref VPC
       CidrBlock: 10.1.50.0/24
       AvailabilityZone: ap-southeast-2b 
-      Tags:
-      - Key: Name
-      Value: !Sub ${AWS::StackName}-Private-A
+     
