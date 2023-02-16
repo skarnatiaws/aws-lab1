@@ -8,7 +8,7 @@ Resources:
       EnableDnsHostnames: true
       Tags:
       - Key: Name
-        Value:  !Join ['', [!Ref "AWS::StackName", "-VPC-GIT-lab1" ]]
+      Value:  !Join ['', [!Ref "AWS::StackName", "-VPC-GIT-lab1" ]]
 		
   PublicSubnetA:
     Type: AWS::EC2::Subnet
@@ -18,7 +18,7 @@ Resources:
       AvailabilityZone: ap-southeast-2a       
       Tags:
       - Key: Name
-        Value: !Sub ${AWS::StackName}-Public-A
+      Value: !Sub ${AWS::StackName}-Public-A
 		
   PrivateSubnetA:
     Type: AWS::EC2::Subnet
@@ -28,4 +28,4 @@ Resources:
       AvailabilityZone: ap-southeast-2b 
       Tags:
       - Key: Name
-        Value: !Sub ${AWS::StackName}-Private-A
+      Value: !Sub ${AWS::StackName}-Private-A
