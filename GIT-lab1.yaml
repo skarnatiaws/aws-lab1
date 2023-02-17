@@ -1,22 +1,23 @@
-    Resources:
-        ## First, a VPC:
-      VPC-GIT-lab1:
-        Type: AWS::EC2::VPC
-        Properties:
-          CidrBlock: 10.1.0.0/16
-          EnableDnsSupport: true
-          EnableDnsHostnames: true
+Resources:
+    ## First, a VPC:
+  VPC-GIT-lab1:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.1.0.0/16
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
      
-      PublicSubnetA:
-        Type: AWS::EC2::Subnet
-        Properties:
-          VpcId: !Ref VPC-GIT-lab1
-          CidrBlock: 10.1.0.0/24
-          AvailabilityZone: ap-southeast-2a       
+  PublicSubnetA:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC-GIT-lab1
+      CidrBlock: 10.1.0.0/24
+      AvailabilityZone: ap-southeast-2a       
      
-        PrivateSubnetA:
-        Type: AWS::EC2::Subnet
-        Properties:
-          VpcId: !Ref VPC-GIT-lab1
-          CidrBlock: 10.2.0.0/24
-          AvailabilityZone: ap-southeast-2b 
+    PrivateSubnetA:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC-GIT-lab1
+      CidrBlock: 10.2.0.0/24
+      AvailabilityZone: ap-southeast-2b 
+      
