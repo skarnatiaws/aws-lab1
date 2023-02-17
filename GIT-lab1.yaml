@@ -5,8 +5,8 @@ Resources:
     Properties:
       CidrBlock: 10.1.0.0/16
       EnableDnsSupport: true
-      EnableDnsHostnames: true
-     
+      EnableDnsHostnames: true   
+  ##Subnet1
   PublicSub1:
     Type: AWS::EC2::Subnet
     Properties:
@@ -14,8 +14,8 @@ Resources:
       CidrBlock: 10.1.0.0/24
       AvailabilityZone: ap-southeast-2a
       MapPublicIpOnLaunch: true
-     
-    PrivateSub2:
+  ##Subnet2
+  PrivateSub2:
     Type: AWS::EC2::Subnet
     Properties:
       VpcId: !Ref VPC-GIT-lab1
