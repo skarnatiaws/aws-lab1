@@ -1,6 +1,6 @@
 Resources:
     ## First, a VPC:
-  VPC-GIT-lab1:
+  VPClab1:
     Type: AWS::EC2::VPC
     Properties:
       CidrBlock: 10.1.0.0/16
